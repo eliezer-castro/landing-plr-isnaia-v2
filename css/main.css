@@ -37,7 +37,7 @@ body {
 }
 
 .container {
-  padding: 0 64px;
+  padding: 0 16px;
   margin: 0 auto;
   width: 100%;
   max-width: 1246px;
@@ -92,6 +92,14 @@ body {
           box-shadow: 0px 0px 40px rgba(35, 137, 88, 0.6), 0px 13.2px 26.4px rgba(7, 28, 18, 0.24), inset 0px -4.10667px 4.10667px #1D7048, inset 0px 4.10667px 4.10667px #2AA369;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media only screen and (max-width: 667px) {
+  .btn-call {
+    max-width: 600px;
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 p {
@@ -188,6 +196,7 @@ h5 {
 
 .hero .container img {
   width: 300px;
+  height: auto;
   text-align: center;
 }
 
@@ -582,7 +591,7 @@ h5 {
 
 .pagamento .container .preco {
   margin-top: 32px;
-  padding: 32px 0px 0px 0px;
+  padding: 32px 0 0 0;
   max-width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,6 +611,10 @@ h5 {
           backdrop-filter: blur(50px);
   border-radius: 5px;
   color: #080A0C;
+}
+
+.pagamento .container .preco .btn-call {
+  background-color: blue;
 }
 
 .pagamento .container .preco .preco-antigo {
@@ -628,6 +641,7 @@ h5 {
 
 .pagamento .container .preco img {
   margin-top: 24px;
+  width: 100%;
 }
 
 .pagamento .container .preco .info {
@@ -656,8 +670,14 @@ h5 {
           justify-content: center;
 }
 
+.pagamento .container .preco .info .info-box p {
+  font-size: 14px;
+}
+
 .pagamento .container .preco .info .info-box img {
   margin-top: 0;
+  height: 16px;
+  margin-right: 8px;
 }
 
 footer {

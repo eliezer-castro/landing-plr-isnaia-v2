@@ -19,6 +19,8 @@ $max_font: 24px;
   text-align: left;
 }
 
+
+
 html {
   scroll-behavior: smooth;
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
@@ -30,7 +32,7 @@ body {
 }
 
 .container {
-  padding: 0 64px;
+  padding: 0 16px;
   margin: 0 auto;
   width: 100%;
   max-width: 1246px;
@@ -76,6 +78,13 @@ body {
     box-shadow: 0px 0px 40px rgba(35, 137, 88, 0.6), 8.08267e-16px 13.2px 26.4px rgba(7, 28, 18, 0.24), inset -2.51461e-16px -4.10667px 4.10667px #1D7048, inset 2.51461e-16px 4.10667px 4.10667px #2AA369;
     transition: 0.3s;
   }
+
+  @include for_breakpoint(mobile) {
+    max-width: 600px;
+    width: 100%;
+    font-size: 14px;
+  }
+
 }
 
 p {
@@ -92,14 +101,14 @@ h2 {
   font-family: 'Inter';
   font-weight: 700;
   max-width: 850px;
-  font-size : 50px;
+  font-size: 50px;
   line-height: 130%;
   text-align: center;
   color: #FFFFFF;
 
   @include for_breakpoint(mobile) {
     font-size: 32px;
-}
+  }
 }
 
 h3 {
@@ -108,9 +117,10 @@ h3 {
   font-weight: 600;
   font-size: 40px;
   line-height: 150%;
+
   @include for_breakpoint(mobile) {
     font-size: 24px;
-}
+  }
 }
 
 h4 {
@@ -119,9 +129,11 @@ h4 {
   font-weight: 600;
   font-size: 34px;
   line-height: 150%;
+
   @include for_breakpoint(mobile) {
     font-size: 20px;
-}
+  }
+
   /* or 135% */
 
   letter-spacing: -0.03em;
@@ -134,9 +146,10 @@ h5 {
   font-size: 24px;
   line-height: 130%;
   letter-spacing: -0.03em;
+
   @include for_breakpoint(mobile) {
     font-size: 20px;
-}
+  }
 
 }
 
@@ -151,14 +164,17 @@ h5 {
     align-items: center;
 
     img {
+      
       width: 300px;
+      height: auto;
       text-align: center;
     }
-  //   @include for_breakpoint(mobile) {
-  //     h2{
-  //       font-size: 26px;
-  //     }
-  // }
+
+    //   @include for_breakpoint(mobile) {
+    //     h2{
+    //       font-size: 26px;
+    //     }
+    // }
 
     p {
       margin-top: 16px;
@@ -183,32 +199,33 @@ h5 {
       align-items: center;
       justify-content: center;
       padding-bottom: 64px;
+
       @include for_breakpoint(mobile) {
-          flex-direction: column;
-          text-align: center;
+        flex-direction: column;
+        text-align: center;
       }
+
       h4 {
 
         @include for_breakpoint(mobile) {
           text-align: center;
-      }
+        }
       }
 
       .garantia-detalhes {
         display: flex;
+
         @include for_breakpoint(mobile) {
           flex-direction: column;
           margin-top: 16px;
-      }
-       
+        }
+
         .garantia-item {
           display: flex;
+
           @include for_breakpoint(mobile) {
-           
             margin-top: 16px;
-        }
-          
-       
+          }
 
           img {
             margin-left: 32px;
@@ -252,20 +269,22 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     @include for_breakpoint(mobile) {
-           
+
       flex-direction: column;
       text-align: center;
 
-      h3{
+      h3 {
         text-align: center;
       }
-      P{
+
+      P {
         margin-top: 16px;
         text-align: center;
       }
 
-  }
+    }
 
     .title-section {
       p {
@@ -316,12 +335,13 @@ h5 {
       margin-top: 32px;
       display: flex;
       justify-content: space-around;
+
       @include for_breakpoint(mobile) {
         flex-direction: column;
 
       }
-  
-    
+
+
 
       .para-quem-produto-item {
         margin: 0 8px;
@@ -333,7 +353,7 @@ h5 {
         height: 261px;
         font-size: 64px;
         margin-bottom: 16px;
-       
+
         p {
           color: #848197;
         }
@@ -358,16 +378,17 @@ h5 {
       margin-top: 32px;
       display: flex;
       justify-content: space-around;
+
       @include for_breakpoint(mobile) {
         flex-direction: column;
       }
-  
+
 
       .segmento-prl {
         @include for_breakpoint(mobile) {
           margin-bottom: 16px;
         }
-    
+
         margin: 0 8px;
         padding: 36px;
         background: #131521;
@@ -393,7 +414,7 @@ h5 {
 
 .vantagens {
   padding-bottom: 64px;
-  
+
 
 
   .circle-blur {
@@ -434,34 +455,42 @@ h5 {
   padding-bottom: 64px;
 
   .container {
-    
-    h4{
+
+    h4 {
       text-align: center;
-     
+
     }
-    p{margin-top: 16px; text-align: center; max-width: 500px;}
-    
+
+    p {
+      margin-top: 16px;
+      text-align: center;
+      max-width: 500px;
+    }
+
 
     .depoimentos {
-      
+
       .depoimento-linha {
         display: flex;
+
         @include for_breakpoint(mobile) {
           flex-direction: column;
         }
 
         .depoimento {
-          .autor{
+          .autor {
             display: flex;
             align-items: center;
 
-            p{
+            p {
               margin-left: 16px;
             }
           }
-          p{
+
+          p {
             text-align: start;
           }
+
           margin-top: 16px;
           margin-right: 14px;
           padding: 24px 16px;
@@ -490,7 +519,7 @@ h5 {
 
     .preco {
       margin-top: 32px;
-      padding: 32px 0px 0px 0px;
+      padding: 32px 0 0 0;
       max-width: 600px;
       display: flex;
       flex-direction: column;
@@ -501,6 +530,10 @@ h5 {
       backdrop-filter: blur(50px);
       border-radius: 5px;
       color: #080A0C;
+
+      .btn-call{
+        background-color: blue;
+      }
 
       .preco-antigo {
         font-family: 'Inter';
@@ -525,27 +558,37 @@ h5 {
         margin-bottom: 8px;
         color: #0B0D11;
 
-        
+
       }
-      img{
+
+      img {
         margin-top: 24px;
+        width: 100%;
       }
-      .info{
+
+      .info {
         width: 100%;
         margin-top: 16px;
-        border-top: 1px solid #3333 ;
+        border-top: 1px solid #3333;
         display: flex;
         align-items: center;
-      
 
-        .info-box{
+
+        .info-box {
           padding: 16px;
           width: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
-          img{
+         
+          p{
+            font-size: 14px;
+          }
+
+          img {
             margin-top: 0;
+            height: 16px;
+            margin-right: 8px;
           }
         }
       }
@@ -553,34 +596,36 @@ h5 {
   }
 }
 
-footer{
+footer {
   margin-top: 32px;
   background-color: #151725;
   width: 100%;
   padding: 30px;
 
-  .container{
+  .container {
     display: flex;
     justify-content: flex-start;
+
     @include for_breakpoint(mobile) {
       flex-direction: column;
 
-    
+
     }
 
-    .right{
+    .right {
       display: flex;
       justify-content: end;
+
       @include for_breakpoint(mobile) {
         flex-direction: column;
-  
-      
+
+
       }
 
     }
   }
 
-  p{
+  p {
     font-size: 13px;
   }
 }
