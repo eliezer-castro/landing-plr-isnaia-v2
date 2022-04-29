@@ -349,9 +349,7 @@ h5 {
         background: #131521;
         border: 1px solid #2A2D40;
         border-radius: 6px;
-        width: 390px;
-        height: 261px;
-        font-size: 64px;
+        padding: 32px;
         margin-bottom: 16px;
 
         p {
@@ -472,12 +470,14 @@ h5 {
 
       .depoimento-linha {
         display: flex;
+        justify-content: space-between;
 
         @include for_breakpoint(mobile) {
           flex-direction: column;
         }
 
         .depoimento {
+          width: 100%;
           .autor {
             display: flex;
             align-items: center;
@@ -492,7 +492,7 @@ h5 {
           }
 
           margin-top: 16px;
-          margin-right: 14px;
+          margin-right: 16px;
           padding: 24px 16px;
           background: #131521;
           border-radius: 5px;
@@ -503,7 +503,7 @@ h5 {
 
           .texto-depoimento {
             margin-top: 8px;
-            font-size: 16px;
+            font-size: 14px;
           }
         }
       }
@@ -563,7 +563,7 @@ h5 {
 
       img {
         margin-top: 24px;
-        width: 100%;
+        width: 80%;
       }
 
       .info {
@@ -587,8 +587,10 @@ h5 {
 
           img {
             margin-top: 0;
-            height: 16px;
+            height: 24px;
+            width: 24px;
             margin-right: 8px;
+  
           }
         }
       }

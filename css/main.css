@@ -407,9 +407,7 @@ h5 {
   background: #131521;
   border: 1px solid #2A2D40;
   border-radius: 6px;
-  width: 390px;
-  height: 261px;
-  font-size: 64px;
+  padding: 32px;
   margin-bottom: 16px;
 }
 
@@ -540,6 +538,9 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media only screen and (max-width: 667px) {
@@ -552,8 +553,9 @@ h5 {
 }
 
 .testemunhas .container .depoimentos .depoimento-linha .depoimento {
+  width: 100%;
   margin-top: 16px;
-  margin-right: 14px;
+  margin-right: 16px;
   padding: 24px 16px;
   background: #131521;
   border-radius: 5px;
@@ -582,7 +584,7 @@ h5 {
 
 .testemunhas .container .depoimentos .depoimento-linha .depoimento .texto-depoimento {
   margin-top: 8px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .pagamento .container p {
@@ -641,7 +643,7 @@ h5 {
 
 .pagamento .container .preco img {
   margin-top: 24px;
-  width: 100%;
+  width: 80%;
 }
 
 .pagamento .container .preco .info {
@@ -676,7 +678,8 @@ h5 {
 
 .pagamento .container .preco .info .info-box img {
   margin-top: 0;
-  height: 16px;
+  height: 24px;
+  width: 24px;
   margin-right: 8px;
 }
 
