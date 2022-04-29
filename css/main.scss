@@ -429,7 +429,18 @@ h5 {
 
   .container {
     display: flex;
-    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+    @include for_breakpoint(mobile) {
+      flex-direction: column;
+
+      .img-ebook {
+        img {
+          margin-left: 0;
+        }
+      }
+    }
 
     .vantagens-itens {
       margin-top: 16px;
@@ -446,6 +457,7 @@ h5 {
 
     .img-ebook {
       img {
+        margin-left: -80px;
         width: 100%;
         height: auto;
         position: relative;
@@ -635,4 +647,21 @@ footer {
   p {
     font-size: 13px;
   }
+}
+
+.sobre{
+  margin-top: 64px;
+  height: 400px;
+
+  .container{
+    display: flex;
+
+    .sobre-detalhes{
+      p{
+        max-width: 500px;
+      }
+    }
+
+  }
+  
 }
