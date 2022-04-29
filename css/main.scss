@@ -307,7 +307,6 @@ h5 {
           margin-right: 8px;
         }
       }
-
     }
 
     p {
@@ -397,7 +396,6 @@ h5 {
         background: #131521;
         border: 1px solid #2A2D40;
         border-radius: 6px;
-
         font-size: 64px;
 
         p {
@@ -422,6 +420,7 @@ h5 {
 
   .circle-blur {
     position: absolute;
+    margin-top: -400px;
     width: 100%;
     height: auto;
     z-index: -100;
@@ -615,6 +614,44 @@ h5 {
   }
 }
 
+
+.sobre{
+  margin-top: 16px;
+  margin-bottom: 64px;
+
+  .container{
+    display: flex;
+
+    .sobre-detalhes{
+      p{
+        color: #d7d6db;
+        max-width: 500px;
+        font-size: 16px;
+      }
+      
+
+      .social{
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        img{
+          width: 16px;
+          margin-right: 8px;
+        }
+      }
+    }
+    .banner{
+      
+
+      img{
+        width: 50%;
+      }
+    }
+
+  }
+  
+}
+
 footer {
   margin-top: 32px;
   background-color: #151725;
@@ -647,21 +684,4 @@ footer {
   p {
     font-size: 13px;
   }
-}
-
-.sobre{
-  margin-top: 64px;
-  height: 400px;
-
-  .container{
-    display: flex;
-
-    .sobre-detalhes{
-      p{
-        max-width: 500px;
-      }
-    }
-
-  }
-  
 }

@@ -689,6 +689,7 @@ h5 {
 
 .vantagens .circle-blur {
   position: absolute;
+  margin-top: -400px;
   width: 100%;
   height: auto;
   z-index: -100;
@@ -904,6 +905,42 @@ h5 {
   margin-right: 8px;
 }
 
+.sobre {
+  margin-top: 16px;
+  margin-bottom: 64px;
+}
+
+.sobre .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sobre .container .sobre-detalhes p {
+  color: #d7d6db;
+  max-width: 500px;
+  font-size: 16px;
+}
+
+.sobre .container .sobre-detalhes .social {
+  margin-top: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sobre .container .sobre-detalhes .social img {
+  width: 16px;
+  margin-right: 8px;
+}
+
+.sobre .container .banner img {
+  width: 50%;
+}
+
 footer {
   margin-top: 32px;
   background-color: #151725;
@@ -949,20 +986,5 @@ footer .container .right {
 
 footer p {
   font-size: 13px;
-}
-
-.sobre {
-  margin-top: 64px;
-  height: 400px;
-}
-
-.sobre .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.sobre .container .sobre-detalhes p {
-  max-width: 500px;
 }
 /*# sourceMappingURL=main.css.map */
