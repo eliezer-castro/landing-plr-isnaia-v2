@@ -27,9 +27,30 @@ html {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
 }
 
+.active{
+  display: block !important ;
+  animation: 1s ease-header;
+
+  @keyframes ease-header {
+      0%{
+        opacity: 0;
+      }
+
+      50%{
+        opacity: 0.5;
+      }
+
+      100%{
+        opacity: 1;
+      }
+  }
+}
+
 body {
   background-color: #080A0C;
   color: white;
+  padding: 0px;
+  margin: 0px;
 }
 
 .container {
@@ -155,6 +176,8 @@ h5 {
 }
 
 .hero {
+  padding: 0;
+  margin: 0;
   background: url("/assets/background.png");
   background-size: cover;
 
@@ -255,6 +278,9 @@ h5 {
 }
 
 .sobre-prl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(91.05deg, #151725 -17.31%, rgba(21, 23, 37, 0) 108.32%);
   border-width: 3px;
   border-style: solid;
@@ -271,6 +297,7 @@ h5 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0;
 
     
 
@@ -323,11 +350,16 @@ h5 {
 .para-quem-produto {
   padding-top: 64px;
   padding-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 0;
 
 
     .sub-title {
@@ -344,9 +376,6 @@ h5 {
         flex-direction: column;
 
       }
-
-
-
       .para-quem-produto-item {
         margin: 0 8px;
         padding: 36px;
@@ -366,14 +395,24 @@ h5 {
 
 .conteudo-prl {
   padding-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin: 0;
+
+    h3{
+      text-align: center;
+    }
 
     p {
       margin-top: 16px;
+      text-align: center;
     }
 
     .segmentos-prls {
@@ -387,6 +426,8 @@ h5 {
 
 
       .segmento-prl {
+        min-width: 330px;
+        max-width: 330px;
         @include for_breakpoint(mobile) {
           margin-bottom: 16px;
         }
@@ -466,7 +507,7 @@ h5 {
 }
 
 .testemunhas {
-  padding-bottom: 64px;
+  padding-bottom:24px;
 
   .container {
 
@@ -616,40 +657,189 @@ h5 {
 
 
 .sobre{
-  margin-top: 16px;
+  margin-top:64px;
   margin-bottom: 64px;
 
   .container{
-    display: flex;
-
-    .sobre-detalhes{
-      p{
-        color: #d7d6db;
-        max-width: 500px;
-        font-size: 16px;
-      }
-      
-
-      .social{
-        margin-top: 8px;
-        display: flex;
-        align-items: center;
-        img{
-          width: 16px;
-          margin-right: 8px;
+   h4{
+     margin-bottom: 16px;
+   }
+   
+    .wrapper-content{
+      margin-top: 32px;
+      display: flex;
+      @include for_breakpoint(mobile) {
+        flex-direction: column;
+        .sobre-detalhes{
+          margin-top: 16px;
         }
       }
-    }
-    .banner{
+          .sobre-detalhes{
+            p{
+              color: #d7d6db;
+              max-width: 500px;
+              font-size: 14px;
+            }
+            
       
-
-      img{
-        width: 50%;
-      }
+            .social{
+              margin-top: 8px;
+              display: flex;
+              align-items: center;
+              img{
+                width: 16px;
+                margin-right: 8px;
+              }
+            }
+          }
+          .banner{
+            
+            img{
+              width: 50%;
+              border-radius: 6px;
+            }
+          }
     }
 
   }
   
+}
+
+.faq{
+  padding-top: 64px;
+  padding-bottom: 64px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    @include for_breakpoint(mobile) {
+      flex-direction: column;
+    }
+    .left{
+      font-family: 'Inter';
+      
+      .faq-header{
+        font-size: 20px;
+        padding: 16px 0;
+      }
+      
+      .faq-content {
+        margin: 0 auto;
+      }
+      
+      .faq-question {
+        padding: 10px 0px;
+        //border-bottom: 1px solid #2A2D40;
+      }
+      
+      .panel-title {
+        font-size: 16px;
+        width: 100%;
+        position: relative;
+        margin: 0;
+        padding: 10px 10px 0 48px;
+        display: block;
+        cursor: pointer;
+      }
+      
+      .panel-content {
+        font-size: 14px;
+        padding: 0px 14px;
+        margin: 0 40px;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+        position: relative;
+        opacity: 0;
+        color: #a8a6b2;
+        -webkit-transition: .4s ease;
+        -moz-transition: .4s ease;
+        -o-transition: .4s ease;
+        transition: .4s ease;
+      }
+      
+      .panel:checked ~ .panel-content{
+        height: auto;
+        opacity: 1;
+        padding: 14px;
+      }
+      
+      .plus {
+        position: absolute;
+        margin-top: 10px;
+        z-index: 5;
+        font-size: 16px;
+        line-height: 100%;
+        -webkit-user-select: none;    
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        -webkit-transition: .2s ease;
+        -moz-transition: .2s ease;
+        -o-transition: .2s ease;
+        transition: .2s ease;
+      }
+      
+      .panel:checked ~ .plus {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      
+      .panel {
+        display: none;
+      }
+    }
+    .right{
+      
+      .enviar-duvida{
+        display: block;
+        float: right;
+        padding: 32px 8px;
+        background: #131521;
+        border: 1px solid #2A2D40;
+        max-width: 300px;
+        border-radius: 4px;
+
+        @include for_breakpoint(mobile) {
+          margin-top: 24px;
+          display: block;
+          float: none;
+        }
+
+        img{
+          height: 32px;
+        }
+
+        h5{
+          padding: 16px;
+          text-align: center;
+          font-size: 16px;
+        }
+
+        p{
+          text-align: center;
+          padding: 8px;
+          font-size: 14px;
+          margin-bottom: 32px;
+          color: #c0bfc8;
+        }
+
+        .btn{
+          background-color: blue;
+          padding: 16px 16px;
+          border-radius: 4px;
+          font-size: 13px;
+          background-color: white;
+          font-family: 'Inter';
+          color: #131521;
+          font-weight: 700;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 footer {
@@ -660,12 +850,32 @@ footer {
 
   .container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+
+    a{
+      text-align: center;
+      font-family: 'Inter';
+      font-size: 13px;
+      color: white;
+      display: inline-block;
+    
+
+      
+      img{
+        margin: -6px auto;
+        max-width: 20px;
+        height: auto;
+      }
+
+    }
 
     @include for_breakpoint(mobile) {
       flex-direction: column;
 
-
+      p{
+        text-align: center;
+        margin-bottom: 16px;
+      }
     }
 
     .right {
@@ -685,3 +895,5 @@ footer {
     font-size: 13px;
   }
 }
+
+

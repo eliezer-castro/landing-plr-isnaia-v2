@@ -1,15 +1,3 @@
-window.onscroll = function () {
-  scrollRotate();
-};
-
-function scrollRotate() {
-  let image = document.getElementById("circle");
-  image.style.transform = "rotate(" + window.pageYOffset / 2 + "deg)";
-}
-
-
-// Animações da pagina conforme o Scroll
-
 const debounce = function(func, wait, immediate) {
   let timeout;
   return function(...args) {
