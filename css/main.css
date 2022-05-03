@@ -416,27 +416,41 @@ h5 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-animation: fade-anime-top 0.8s ease;
           animation: fade-anime-top 0.8s ease;
+  text-align: left;
 }
 
-.hero .container img {
+@media only screen and (max-width: 667px) {
+  .hero .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .hero .container .right {
+    display: none;
+  }
+}
+
+.hero .container .left img {
   width: 300px;
   height: auto;
   text-align: center;
 }
 
-.hero .container p {
+.hero .container .left h2 {
+  text-align: left;
+}
+
+.hero .container .left p {
   margin-top: 16px;
   max-width: 600px;
   font-family: 'Inter';
@@ -445,13 +459,30 @@ h5 {
   line-height: 150%;
   text-align: center;
   color: #CED4DA;
+  text-align: left;
 }
 
-.hero .container .pagamentos {
+.hero .container .left .pagamentos {
   margin-top: 32px;
 }
 
-.hero .container .garantia {
+@media only screen and (max-width: 667px) {
+  .hero .container .left {
+    text-align: center;
+  }
+  .hero .container .left h2 {
+    text-align: center;
+  }
+  .hero .container .left p {
+    text-align: center;
+  }
+}
+
+.hero .container .right img {
+  width: 100%;
+}
+
+.garantia {
   margin-top: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -466,7 +497,7 @@ h5 {
 }
 
 @media only screen and (max-width: 667px) {
-  .hero .container .garantia {
+  .garantia {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -476,19 +507,19 @@ h5 {
 }
 
 @media only screen and (max-width: 667px) {
-  .hero .container .garantia h4 {
+  .garantia h4 {
     text-align: center;
   }
 }
 
-.hero .container .garantia .garantia-detalhes {
+.garantia .garantia-detalhes {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media only screen and (max-width: 667px) {
-  .hero .container .garantia .garantia-detalhes {
+  .garantia .garantia-detalhes {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -497,25 +528,25 @@ h5 {
   }
 }
 
-.hero .container .garantia .garantia-detalhes .garantia-item {
+.garantia .garantia-detalhes .garantia-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 @media only screen and (max-width: 667px) {
-  .hero .container .garantia .garantia-detalhes .garantia-item {
+  .garantia .garantia-detalhes .garantia-item {
     margin-top: 16px;
   }
 }
 
-.hero .container .garantia .garantia-detalhes .garantia-item img {
+.garantia .garantia-detalhes .garantia-item img {
   margin-left: 32px;
   width: 60px;
   height: 60px;
 }
 
-.hero .container .garantia .garantia-detalhes .garantia-item p {
+.garantia .garantia-detalhes .garantia-item p {
   text-align: left;
   margin-left: 8px;
   margin-top: 0;
